@@ -1,0 +1,51 @@
+Changelog Legend:
+
+[+] = Added
+[*] = Changed
+[^] = Moved
+[=] = No Changes
+[x] = Deleted
+[!] = Bugs
+
+----
+
+(24/10/2014) - Update - Version 1.1.1
+
+[+] Added Dutch translation.
+[+] Added support for the default Google font Roboto Condensed (used for headlines) within the Visual Editor.
+
+----
+
+(11/10/2014) - Update - Version 1.1.0
+
+[+] Added Italian translation.
+[*] Updated displaying of the footer widget areas.
+[x] Removed deprecated function "screen_icon()" from class-tgm-plugin-activation.php.
+
+----
+
+(18/09/2014) - Update - Version 1.0.4
+
+[!] Fixed Uncaught JavaScript TypeError which occurred if there was not assigned any Main Header Menu.
+
+----
+
+(04/09/2014) - Update - Version 1.0.3
+
+[*] Added conditions for using the Masonry.js script only on archive pages.
+
+----
+
+(29/08/2014) - Update - Version 1.0.2
+
+[x] Removed included Masonry.js and ImagesLoaded.js (replaced by core script).
+
+----
+
+(06/08/2014) - Update - Version 1.0.1
+
+[*] Defined suggested width for the Header Images.
+
+----
+
+(06/08/2014) - The initial public release - Version 1.0.0
