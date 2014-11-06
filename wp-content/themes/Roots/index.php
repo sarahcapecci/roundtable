@@ -1,4 +1,6 @@
-<?php get_template_part('templates/page', 'header'); ?>
+<!-- BLOG PAGE - UPDATES -->
+<div>Picture here</div>
+<h2>Welcome to the Regional Youth Roundtable.</h2>
 
 <?php if (!have_posts()) : ?>
   <div class="alert alert-warning">
@@ -12,7 +14,7 @@
 <?php endwhile; ?>
 
 <?php if ($wp_query->max_num_pages > 1) : ?>
-  <nav class="post-nav">
+  <nav class="pagination">
     <ul class="pager">
       <li class="previous"><?php next_posts_link(__('&larr; Older posts', 'roots')); ?></li>
       <li class="next"><?php previous_posts_link(__('Newer posts &rarr;', 'roots')); ?></li>
