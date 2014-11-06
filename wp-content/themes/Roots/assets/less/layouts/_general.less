@@ -1,10 +1,154 @@
-// Content wrapper
-.wrap { }
+// GENERAL CLASSES USED ACROSS THE WEBSITE
+// * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-// Main content area
-.main {
-  .make-sm-column(@main-sm-columns);
-  .sidebar-primary & {
-    .make-sm-column(@main-sm-columns - @sidebar-sm-columns);
-  }
+// DISPLAY & POSITION
+// * * * * * * * * * * * * * * * * * * * * * * * * * //
+.block {
+	display: block;
+}
+.inline-block {
+	display: inline-block;
+}
+
+.inline-block-mob {
+	display: inline-block;
+	// @media all and (max-width: @mobile) {
+	// 	display: block;
+	// }
+}
+.absolute {
+	position: absolute;
+}
+.relative {
+	position: relative;
+}
+.clear-both {
+	clear: both;
+}
+
+// Interaction
+.pointer {
+	cursor: pointer;
+}
+
+.blue-link {
+	color: @blue;
+	.hover-gray-txt();
+}
+
+// SPACE & LOOK
+// * * * * * * * * * * * * * * * * * * * * * * * * * //
+.padding-none {
+	padding: 0;
+}
+.lateral-padding {
+	.total-lateral-padding();
+}
+.total-padding {
+	.total-lateral-padding();
+	.total-top-bottom-padding();
+}
+.margin-right-5 {
+	margin-right: 5px;
+}
+.margin-left-5 {
+	margin-left: 5px;
+}
+.vertical-al-top {
+	vertical-align: top;
+}
+.margin-top-10 {
+	margin-top: 10px;
+}
+.margin-bottom-10 {
+	margin-bottom: 10px;
+}
+.margin-top-20 {
+	margin-top: 20px;
+}
+.margin-bottom-20 {
+	margin-bottom: 20px;
+}
+.margin-top-none {
+	margin-top: 0px;
+}
+.margin-top-30 {
+	margin-top: 30px;
+}
+.margin-bottom-30 {
+	margin-bottom: 30px;
+}
+.white-bg {
+	background-color: @white;
+}
+.transparent-bg {
+	background-color: transparent;
+}
+
+.thumbnail {
+	background: no-repeat center;
+	background-size: cover;
+}
+
+// TYPE RELATED
+// * * * * * * * * * * * * * * * * * * * * * * * * * //
+.header-title {
+	font-weight: 500;
+	font-size: 40px;
+	line-height: 48px;
+}
+.gray-txt {
+	color: @light-gray;
+}
+
+.white-txt {
+	color: @white;
+}
+
+.blue-txt {
+	color: @blue;
+}
+
+.text-al-center {
+	text-align: center;
+}
+
+.font-xsm {
+	font-size: 10px;
+	line-height: 14px;
+}
+
+.font-sm {
+	font-size: 12px;
+	line-height: 16px;
+}
+
+.font-md {
+	font-size: 14px;
+	line-height: 18px;
+}
+
+.font-lg {
+	font-size: 20px;
+	line-height: 24px;
+}
+
+.roboto-thin {
+	font-weight: 100;
+}
+
+.roboto-light {
+	font-weight: 300;
+}
+
+.roboto-normal {
+	font-weight: 400;
+}
+
+.roboto-semi-bold {
+	font-weight: 500;
+}
+
+.roboto-bold {
+	font-weight: 700;
 }

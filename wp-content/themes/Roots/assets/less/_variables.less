@@ -1,17 +1,113 @@
 // Grid settings
 // -------------------------
 
-@main-sm-columns:       @grid-columns;
+// @main-sm-columns:       @grid-columns;
 @sidebar-sm-columns:    4;
+// @mobile: 400px;
+
+// FONTS
+// * * * * * * * * * * * * * * * * * * * * * * * * * //
+@import url(http://fonts.googleapis.com/css?family=Roboto:500,100,300,700,400);
 
 
-// Brand colors
-// -------------------------
 
-@brand-primary:         #27ae60;
+// BRAND COLORS
+// * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+@white: #fff;
+@black: #333333;
+@blue: blue;
+@light-gray: lightgray;
 
 
 // Glyphicons path
 // -------------------------
 
 @icon-font-path:        "../vendor/bootstrap/fonts/";
+
+// MIXINS
+// * * * * * * * * * * * * * * * * * * * * * * * * * //
+.padding-side-lg() {
+	padding: 0 40px;
+}
+
+.font-sm() {
+	font-size: 12px;
+}
+
+.padding-side-sm() {
+	padding: 0 20px;
+}
+
+.padding-all-lg() {
+	padding: 40px;
+  // @media screen and (max-width: @mobile) {
+  //   padding: 20px;
+  // }
+}
+
+.padding-all-sm() {
+	padding: 20px;
+}
+
+.total-lateral-padding() {
+	padding-left: 60px;
+	padding-right: 60px;
+
+	// @media screen and (max-width: @mobile) {
+	// 	padding-left: 20px;
+	// 	padding-right: 20px;
+	// }
+}
+
+.total-top-bottom-padding() {
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+
+// VISUAL EFFECTS
+// * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+.fast-transition() {
+  transition: all 0.2s ease;
+}
+
+.slow-transition() {
+    transition: all 0.4s ease;
+}
+
+// HOVER EFFECTS
+// * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+.hover-blue-bg() {
+  &:hover {
+    background-color: @main-blue;
+    color: @white;
+  }
+}
+
+.hover-red-txt() {
+  &:hover {
+    color: @blue;
+  }
+}
+
+.hover-gray-bg() {
+  &:hover {
+    background-color: @light-gray;
+    color: @black;
+  }
+}
+
+.hover-gray-txt() {
+  &:hover {
+    color: @light-gray;
+  }
+}
+
+.hover-white-txt() {
+  &:hover {
+    color: @white;
+  }
+}
+
