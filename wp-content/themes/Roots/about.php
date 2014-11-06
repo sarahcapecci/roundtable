@@ -28,12 +28,14 @@ This is the page where the About content is displayed
 <h3>VISION</h3>
 <?php echo get_field('vision'); ?>
 
+<h3>Sponsors</h3>
 <?php while( has_sub_field('sponsors') ): ?>
 	<?php $sponsor_img = get_sub_field('thumbnail'); ?>
     <span class="whatever" style="background-image: url(<?php echo $sponsor_img['url'] ?>);">
     </span>
 <?php endwhile; ?>
 
+<h3>Partners and Friends</h3>
 <?php while( has_sub_field('partners') ): ?>
 	<?php $partner_img = get_sub_field('thumbnail'); ?>
     <span class="whatever" style="background-image: url(<?php echo $partner_img['url'] ?>);">
