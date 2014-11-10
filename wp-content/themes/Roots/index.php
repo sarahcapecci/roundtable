@@ -1,6 +1,12 @@
 <!-- BLOG PAGE - UPDATES -->
-<div>Picture here</div>
-<h2>Welcome to the Regional Youth Roundtable.</h2>
+<header>
+  <div class="home-banner bg-set">
+  </div>
+  <div>
+    <h2>Welcome to the Regional Youth Roundtable.</h2>
+    <p>Igniting youth-led organizations in Peel.</p>
+  </div>
+</header>
 
 <?php if (!have_posts()) : ?>
   <div class="alert alert-warning">

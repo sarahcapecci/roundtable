@@ -17,14 +17,14 @@
 
 @white: #fff;
 @black: #333333;
-@blue: #22b2e1;
+@main-blue: #22b2e1;
 @orange: #fda63e;
 @light-gray: #f4b569;
 @lighter-gray: #f4b569;
 @blog-gray-text: #575757;
 @member-dark-gray: #515151;
 @title-gray: #8e8e8e;
-@light-gray: #f6f6f6;
+// @light-gray: #f6f6f6;
 
 
 // Glyphicons path
@@ -34,42 +34,30 @@
 
 // MIXINS
 // * * * * * * * * * * * * * * * * * * * * * * * * * //
-.padding-side-lg() {
-	padding: 0 40px;
+.total-lateral-padding() {
+  padding-left: 40px;
+  padding-right: 40px;
 }
-
-.font-sm() {
-	font-size: 12px;
+.total-top-bottom-padding() {
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
-
-.padding-side-sm() {
-	padding: 0 20px;
+.padding-all() {
+  padding: 20px 40px;
 }
-
+// LARGE
 .padding-all-lg() {
-	padding: 40px;
-  // @media screen and (max-width: @mobile) {
-  //   padding: 20px;
-  // }
+  padding: 60px;
 }
-
+.padding-side-lg() {
+	padding: 0 60px;
+}
+// SMALL
 .padding-all-sm() {
 	padding: 20px;
 }
-
-.total-lateral-padding() {
-	padding-left: 60px;
-	padding-right: 60px;
-
-	// @media screen and (max-width: @mobile) {
-	// 	padding-left: 20px;
-	// 	padding-right: 20px;
-	// }
-}
-
-.total-top-bottom-padding() {
-	padding-top: 40px;
-	padding-bottom: 40px;
+.padding-side-sm() {
+  padding: 0 20px;
 }
 
 // VISUAL EFFECTS
@@ -86,32 +74,41 @@
 // HOVER EFFECTS
 // * * * * * * * * * * * * * * * * * * * * * * * * * //
 
+// BACKGROUND
 .hover-blue-bg() {
   &:hover {
     background-color: @main-blue;
     color: @white;
   }
 }
-
-.hover-red-txt() {
-  &:hover {
-    color: @blue;
-  }
-}
-
 .hover-gray-bg() {
   &:hover {
     background-color: @light-gray;
     color: @black;
   }
 }
-
+.hover-orange-bg() {
+  &:hover {
+    background-color: @orange;
+    color: @white;
+  }
+}
+// TEXT
 .hover-gray-txt() {
   &:hover {
     color: @light-gray;
   }
 }
-
+.hover-blue-txt() {
+  &:hover {
+    color: @main-blue;
+  }
+}
+.hover-orange-txt() {
+  &:hover {
+    color: @orange;
+  }
+}
 .hover-white-txt() {
   &:hover {
     color: @white;
