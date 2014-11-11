@@ -39,7 +39,7 @@ This is the page where the About content is displayed
 		<?php echo get_field('vision'); ?>
 	</section>
 	<div class="sponsors">
-	<h3 class="blue-txt">Our Sponsors &amp; Funders</h3>
+	<h3 class="blue-txt font-semi-bold">Our Sponsors &amp; Funders</h3>
 		<?php while( has_sub_field('sponsors') ): ?>
 			<?php $sponsor_img = get_sub_field('thumbnail'); ?>
 		    <span class="thumbnail bg-set" style="background-image: url(<?php echo $sponsor_img['url'] ?>);">
@@ -47,7 +47,7 @@ This is the page where the About content is displayed
 		<?php endwhile; ?>
 	</div>
 	<div class="sponsors">
-		<h3 class="blue-txt">Our Partners &amp; Friends</h3>
+		<h3 class="blue-txt font-semi-bold">Our Partners &amp; Friends</h3>
 		<?php while( has_sub_field('partners') ): ?>
 			<?php $partner_img = get_sub_field('thumbnail'); ?>
 		    <span class="thumbnail bg-set" style="background-image: url(<?php echo $partner_img['url'] ?>);">
