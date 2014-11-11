@@ -13,11 +13,26 @@
 	    }
 
 	 ?>
-	<header style="background-image: url(<?php echo $page_bg_image_url ?>)">
-		<?php get_template_part('templates/entry-meta'); ?>
-		<h2 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-	</header>
-	<div class="entry-summary">
+	<div class="preview inline-block">
+		<header class="orange-bg">
+			<?php get_template_part('templates/entry-meta'); ?>
+			<h2 class="entry-title margin-bottom-20"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+			<a class="white-link" href=""><i class="fa fa-share"></i>Share</a>
+		</header>
+		<div class="relative bg-set featured" style="background-image: url(<?php echo $page_bg_image_url ?>)">
+			<?php if ($wp_query->max_num_pages > 1) : ?>
+			  <nav class="post-pagination">
+			    <ul>
+			      <li class="previous"><?php next_posts_link(__('&larr; Older', 'roots')); ?></li>
+			      <li class="next"><?php previous_posts_link(__('Newer &rarr;', 'roots')); ?></li>
+			    </ul>
+			  </nav>
+			<?php endif; ?>
+		</div>
+		
+	</div>
+	<div class="entry-summary inline-block">
+		<img class="margin-bottom-10" src="<?php echo get_template_directory_uri(); ?>/assets/img/post_devider.png" alt="">
 		<?php echo content(150); ?>
 	</div>
 </article>

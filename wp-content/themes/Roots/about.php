@@ -19,7 +19,7 @@ This is the page where the About content is displayed
 	    $page_bg_image_url = get_background_image();
 	}
 ?>
-<div class="about-header" style="background-image: url(<?php echo $page_bg_image_url ?>);">
+<div class="about-header bg-set" style="background-image: url(<?php echo $page_bg_image_url ?>);">
 </div>
 <?php $small_image = get_field('small_image'); ?>
 <div class="whatever-bigger" style="background-image: url(<?php echo $small_image['url'] ?>);"></div>

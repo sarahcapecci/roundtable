@@ -2,12 +2,91 @@
 //* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *//
 
 .home-banner {
-	background-image: url(../img/home_image.jpg);
-	width: 70%;
-	height: 300px;
+	div {
+		height: 300px;
+		display: inline-block;
+		vertical-align: top;
+	}
+	div:first-child {
+		background-image: url(../img/home_image.jpg);
+		width: 70%;
+	}
+	div:nth-child(2) {
+		width: 28.5%;
+		margin-left: 1%;
+		color: @white;
+		.padding-all-sm();
+
+		h2 {
+			color: @white;
+			font-size: 36px;
+			line-height: 42px;
+		}
+
+		p {
+			margin-top: 40px;
+			font-size: 24px;
+			line-height: 28px;
+		}
+	}
 }
 
+.entry-summary, .preview {
+	width: 48%;
+	vertical-align: top;
+}
 
+.preview {
+	header, div {
+		width: 100%;
+	}
+
+	h2 a {
+		color: white;
+	}
+}
+
+.entry-summary, .preview header {
+	.padding-all();
+}
+
+div.featured {
+	height: 700px;
+	margin-top: 40px;
+}
+
+.post-meta {
+	time, p, span {
+		display: inline-block;
+	}
+	time, p {
+		width: 25%;
+		color: @white;
+	}
+	span {
+		position: absolute;
+		top: 5px;
+		right: 10px;
+		width: 200px;
+		border-bottom: 1px solid white;
+	}
+}
+
+.post-pagination {
+	position: absolute;
+	bottom: 0px;
+	right: 20px;
+
+	ul li {
+		display: inline-block;
+		width: 70px;
+		text-align: right;
+
+		a {
+			.black-link();
+		}
+	}
+}
 // ABOUT
 //* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *//
 .about-header {
