@@ -33,6 +33,6 @@
 	</div>
 	<div class="entry-summary inline-block">
 		<img class="margin-bottom-10" src="<?php echo get_template_directory_uri(); ?>/assets/img/post_devider.png" alt="">
-		<?php echo content(150); ?>
+		<?php echo the_content(); ?>
 	</div>
 </article>

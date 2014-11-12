@@ -22,7 +22,7 @@ This is the page where the team will be displayed
 	<!-- Advisory Board -->
 	<h3 class="orange-txt"><?php echo get_field('advisory_title'); ?></h3>
 		<?php while( has_sub_field('advisory_member') ): ?>
-			<div class="team-card inline-block vertical-al-top">
+			<div class="team-card card-look inline-block vertical-al-top">
 				<?php $member_img = get_sub_field('image'); ?>
 			    <span class="bg-set pic-thumbnail" style="background-image: url(<?php echo $member_img['url'] ?>);">
 			    </span>
