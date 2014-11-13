@@ -1,0 +1,90 @@
+#modal-connect {
+	width: 580px;
+	position: absolute;
+	top: 110px;
+	right: 40px;
+	padding: 20px;
+	box-shadow: 0 0 15px @title-gray;
+}
+
+.modal-container {
+	width: 100%;
+	.left {
+		width: 35%;
+	}
+
+	.right {
+		width: 64%;
+	}
+
+	.left li {
+		width: 19%;
+		display: inline-block;
+		img {
+			max-width: 35px;
+		}
+	}
+
+	form {
+		padding-left: 30px;
+	}
+
+	label {
+		color: @white;
+		position: relative;
+		font-weight: normal;
+
+		span {
+			display: inline-block;
+			max-width: 80%;
+		}
+
+		input {
+			margin-left: 15px;
+			color: @black;
+			font-weight: normal;
+			padding: 4px 8px;
+		}
+	}
+
+	input, textarea, select {
+		border: none;
+		border-radius: 2px;
+		&:focus {
+			outline: none;
+		}
+	}
+
+	textarea {
+		margin-left: 52px;
+		padding: 4px 6px;
+	}
+
+	input[type=submit] {
+		background-color: @orange;
+		color: @white;
+		padding: 4px 8px;
+		right: -5px;
+		position: absolute;
+	}
+
+	select {
+		padding: 4px 8px;
+		width: 268px;
+		background-color: white;
+		color: @black;
+		option {
+			color: @black;
+			z-index: 100;
+			font-weight: normal;
+		}
+	}
+
+	span.close {
+		position: absolute;
+		left: 8px;
+		top: 8px;
+		font-size: 10px;
+		color: @white;
+	}
+}
