@@ -6,6 +6,7 @@
           wp_nav_menu(array('theme_location' => 'primary_navigation', 'menu_class' => 'main-navbar'));
         endif;
       ?>
+      <button class="connect" data-toggle="modal" data-target="#myModal" type="button">Connect</button>
     </nav>
     <img class="transparency" src="<?php echo get_template_directory_uri(); ?>/assets/img/top_transparency.png" alt="">
 </header>
