@@ -19,9 +19,9 @@ This is the page where the information about members is going to be displayed
 		    <p class="text-al-center"><?php echo get_sub_field('description'); ?></p>
 		    <a class="block text-al-center margin-bottom-10" href="http://<?php echo get_sub_field('website'); ?>"><?php echo get_sub_field('website'); ?></a>
 		    <div class="social text-al-center">
-			    <a class="inline-block text-al-center" href="http://facebook.com/<?php echo get_sub_field('facebook'); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/social_facebook.png" alt=""></a>
-			    <a class="inline-block text-al-center" href="http://instagram.com/<?php echo get_sub_field('instagram'); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/social_instagram.png" alt=""></a>
-			    <a class="inline-block text-al-center" href="http://twitter.com/<?php echo get_sub_field('twitter'); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/social_twitter.png" alt=""></a>
+			    <a class="inline-block text-al-center" target="_blank" href="http://facebook.com/<?php echo get_sub_field('facebook'); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/social_facebook.png" alt=""></a>
+			    <a class="inline-block text-al-center" target="_blank" href="http://instagram.com/<?php echo get_sub_field('instagram'); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/social_instagram.png" alt=""></a>
+			    <a class="inline-block text-al-center" target="_blank" href="http://twitter.com/<?php echo get_sub_field('twitter'); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/social_twitter.png" alt=""></a>
 		    </div>
 		</div>
 		<?php endwhile; ?>
