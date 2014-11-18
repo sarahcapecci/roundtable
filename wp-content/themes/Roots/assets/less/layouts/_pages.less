@@ -32,7 +32,7 @@
 }
 
 .entry-summary, .preview {
-	width: 48%;
+	width: 49%;
 	vertical-align: top;
 }
 
@@ -51,7 +51,15 @@
 
 .entry-summary {
 	.total-lateral-padding();
-	padding-top: 10px;
+	padding-top: 40px;
+	p {
+		margin-bottom: 14px;
+	}
+	.divider {
+		top: 20px;
+		border-color: @member-dark-gray;
+		width: 65%;
+	}
 }
 
 div.featured {
@@ -82,14 +90,20 @@ div.featured {
 
 .post-pagination {
 	position: absolute;
-	bottom: 0px;
-	right: 20px;
+	top: 10px;
+	right: 	0px;
 
 	ul li {
 		display: inline-block;
-		width: 70px;
+		width: 25px;
 		text-align: right;
+
+		a {
+			color: @black;
+			.hover-gray-txt();
+		}
 	}
+
 }
 // ABOUT
 //* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *//

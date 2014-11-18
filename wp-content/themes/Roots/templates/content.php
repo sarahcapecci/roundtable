@@ -16,24 +16,24 @@
 	<div class="preview inline-block">
 		<header class="orange-bg">
 			<?php get_template_part('templates/entry-meta'); ?>
-			<h2 class="entry-title margin-bottom-20 font-light"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+			<h2 class="entry-title margin-bottom-20 font-light white-txt"><?php the_title(); ?></h2>
 			<a class="white-link" href=""><i class="fa fa-share-square-o font-md margin-right-5"></i>Share</a>
 		</header>
 		<div class="relative bg-set featured" style="background-image: url(<?php echo $page_bg_image_url ?>)">
-			<?php if ($wp_query->max_num_pages > 1) : ?>
-			<span class="divider"></span>
-			  <nav class="post-pagination">
-			    <ul>
-			      <li class="previous white-link"><?php next_posts_link(__('&larr; Older', 'roots')); ?></li>
-			      <li class="next white-link"><?php previous_posts_link(__('Newer &rarr;', 'roots')); ?></li>
-			    </ul>
-			  </nav>
-			<?php endif; ?>
+			<a href="<?php echo esc_url(home_url('/')); ?>archive">View All</a>
 		</div>
 		
 	</div>
-	<div class="entry-summary inline-block">
-		<img class="margin-bottom-10" src="<?php echo get_template_directory_uri(); ?>/assets/img/post_devider.png" alt="">
+	<div class="entry-summary inline-block relative">
+		<?php if ($wp_query->max_num_pages > 1) : ?>
+		<span class="divider"></span>
+		  <nav class="post-pagination">
+		    <ul>
+		      <li class="previous"><?php next_posts_link(__('&larr;', 'roots')); ?></li>
+		      <li class="next"><?php previous_posts_link(__('&rarr;', 'roots')); ?></li>
+		    </ul>
+		  </nav>
+		<?php endif; ?>
 		<?php echo the_content(); ?>
 	</div>
 </article>
