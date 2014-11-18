@@ -1,9 +1,8 @@
 // Grid settings
 // -------------------------
-
-// @main-sm-columns:       @grid-columns;
 @sidebar-sm-columns:    4;
-// @mobile: 400px;
+@mobile: 400px;
+@tablet: 850px;
 
 // FONTS
 // * * * * * * * * * * * * * * * * * * * * * * * * * //
@@ -38,10 +37,18 @@
 .total-lateral-padding() {
   padding-left: 40px;
   padding-right: 40px;
+
+  @media all and (max-width: @mobile) {
+    .padding-side-sm();
+  }
 }
 .total-top-bottom-padding() {
   padding-top: 20px;
   padding-bottom: 20px;
+  @media all and (max-width: @mobile) {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
 }
 .padding-all() {
   padding: 20px 40px;
@@ -49,16 +56,28 @@
 // LARGE
 .padding-all-lg() {
   padding: 60px;
+  @media all and (max-width: @mobile) {
+    padding: 40px;
+  }
 }
 .padding-side-lg() {
 	padding: 0 60px;
+  @media all and (max-width: @mobile) {
+    padding: 0 40px;
+  }
 }
 // SMALL
 .padding-all-sm() {
 	padding: 20px;
+  @media all and (max-width: @mobile) {
+    padding: 10px;
+  }
 }
 .padding-side-sm() {
   padding: 0 20px;
+  @media all and (max-width: @mobile) {
+    padding: 0 10px;
+  }
 }
 
 // VISUAL EFFECTS

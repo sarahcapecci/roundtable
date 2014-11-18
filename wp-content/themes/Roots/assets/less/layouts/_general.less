@@ -11,9 +11,9 @@
 }
 .inline-block-mob {
 	display: inline-block;
-	// @media all and (max-width: @mobile) {
-	// 	display: block;
-	// }
+	@media all and (max-width: @mobile) {
+		display: block;
+	}
 }
 .absolute {
 	position: absolute;
@@ -66,6 +66,13 @@
 	&.min-height {
 		height: 470px;
 	}
+}
+
+.mobile-show {
+	display: none;
+}
+.tablet-show {
+	display: none;
 }
 //PADDING
 .padding-none {
