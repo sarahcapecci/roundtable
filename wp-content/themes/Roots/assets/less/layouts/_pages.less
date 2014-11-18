@@ -172,7 +172,8 @@ p.about-text {
 }
 
 .team-card {
-	width: 31%;
+	min-width: 370px;
+	width: 31%;	
 	margin: 1%;
 	h3 {
 		margin-bottom: 0;
@@ -188,6 +189,7 @@ p.about-text {
 
 .committees {
 	margin: 0 40px 0 20px;
+	max-width: 400px;
 	div {
 		color: @member-dark-gray;
 	}
@@ -205,7 +207,9 @@ p.about-text {
 
 .member-card {
 	width: 48%;
+	min-width: 370px;
 	margin-right: 1.5%;
+	position: relative;
 	
 	h3 {
 		margin-bottom: 0;
@@ -228,6 +232,12 @@ p.about-text {
 
 .right-side {
 	width: 30%;
+}
+
+div.social {
+	position: absolute;
+	bottom: 30px;
+	left: 35%;
 }
 
 .social img {

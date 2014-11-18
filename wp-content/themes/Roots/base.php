@@ -32,10 +32,11 @@
               <p class="white-txt">Fill out the form to the right and the appropriate Regional Youth Roundtable team member will reply via email.</p>
               <h3 class="white-txt">Let's Get Social</h3>
               <ul>
-                <li><a href="http://"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/popup_facebook.png" alt=""></a></li>
-                <li><a href="http://"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/popup_google_plus.png" alt=""></a></li>
+                <li><a href="http:// www.twitter.com/youthroundtable"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/popup_twitter.png" alt=""></a></li>
+                <li><a href="http://www.facebook.com/youthroundtable "><img src="<?php echo get_template_directory_uri(); ?>/assets/img/popup_facebook.png" alt=""></a></li>
+                <li><a href="http://plus.google.com/112398631688644928178"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/popup_google_plus.png" alt=""></a></li>
                 <li><a href="http://"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/popup_instagram.png" alt=""></a></li>
-                <li><a href="http://"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/popup_linkedin.png" alt=""></a></li>
+                <li><a href="http://www.linkedin.com/company/5356636"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/popup_linkedin.png" alt=""></a></li>
                 <li><a href="http://"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/popup_youtube.png" alt=""></a></li>
               </ul>
             </div>

@@ -38,6 +38,20 @@ This is the page where the About content is displayed
 		<h3 class="orange-txt text-al-center">Our Vision</h3>
 		<?php echo get_field('vision'); ?>
 	</section>
+	<section class="values">
+		<h3 class="orange-txt text-al-center">Our Programs</h3>
+		<?php while( has_sub_field('programs') ): ?>
+		<div class="member-card card-look min-height inline-block vertical-al-top margin-bottom-20">
+			<?php $program_img = get_sub_field('image'); ?>
+		    <span class="pic-thumbnail bg-set" style="background-image: url(<?php echo $program_img['url'] ?>);">
+		    </span>
+		    <h3 class="text-al-center font-lg"><?php echo get_sub_field('program_name'); ?></h3>
+		    <h4 class="text-al-center gray-txt font-md"><?php echo get_sub_field('program_tagline'); ?></h4>
+		    <p class="text-al-center"><?php echo get_sub_field('program_description'); ?></p>
+		    <a class="block text-al-center margin-bottom-10" href="http://<?php echo get_sub_field('program_website'); ?>"><?php echo get_sub_field('program_website'); ?></a>
+		</div>
+		<?php endwhile; ?>
+	</section>
 	<div class="sponsors">
 	<h3 class="blue-txt font-semi-bold">Our Sponsors &amp; Funders</h3>
 		<?php while( has_sub_field('sponsors') ): ?>
