@@ -310,10 +310,27 @@ p.about-text {
 .left-side {
 	width: 65%;
 	margin-right: 2%;
+	@media all and (max-width: @mobile) {
+		width: 100%;
+		margin-right: 0;
+	}
+
+	a.absolute {
+		right: 0;
+		top: 15px;
+		padding: 6px;
+
+		img {
+			max-width: 25px;
+		}
+	}
 }
 
 .right-side {
 	width: 30%;
+	@media all and (max-width: @mobile) {
+		display: none;
+	}
 }
 
 div.social {
