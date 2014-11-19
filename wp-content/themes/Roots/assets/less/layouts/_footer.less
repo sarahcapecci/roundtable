@@ -6,6 +6,10 @@ footer {
 		position: absolute;
 		left: 25%;
 		width: 50%;
+		@media all and (max-width: @mobile) {
+			width: 100%;
+			left: 0;
+		}
 	}
 
 	ul {
@@ -13,6 +17,9 @@ footer {
 		li {
 			display: inline-block;
 			width: 30%;
+			img {
+				max-width: 100%;
+			}
 		}
 	}
 

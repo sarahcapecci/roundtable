@@ -147,7 +147,7 @@ div.featured {
 	}
 }
 
-.mobile-pagination {
+nav.mobile-pagination {
 	bottom: -40px;
 	right: 20px;
 	width: 90px;
@@ -163,16 +163,28 @@ div.featured {
 		}
 	}
 }
+
+a.mobile-pagination {
+	right: 110px;
+	padding: 5px;
+	bottom: -35px;
+}
 // ABOUT
 //* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *//
 .about-header {
 	width: 100%;
 	min-height: 300px;
 	margin-bottom: 40px;
+	@media all and (max-width: @mobile) {
+		margin-bottom: 10px;
+	}
 }
 .about-text {
 	width: 50%;
 	padding: 20px;
+	@media all and (max-width: @mobile) {
+		width: 100%;
+	}
 	p {
 		color: @member-dark-gray;
 	}
@@ -182,15 +194,24 @@ p.about-text, .values p {
 	font-size: 24px;
 	line-height: 30px;
 	color: @about-gray;
+	@media all and (max-width: @mobile) {
+		width: 100%;
+	}
 }
 p.about-text {
 	margin: 10px auto 40px auto;
+	@media all and (max-width: @mobile) {
+		margin-bottom: 10px;
+	}
 }
 .about-thumbnail {
 	width: 35%;
 	margin: 2%;
 	padding: 2%;
 	height: 165px;
+	@media all and (max-width: @mobile) {
+		width: 100%;
+	}
 }
 .values {
 	margin-top: 40px;
@@ -206,6 +227,9 @@ p.about-text {
 	vertical-align: top;
 	text-align: center;
 	padding: 15px 30px;
+	@media all and (max-width: @mobile) {
+		width: 100%;
+	}
 
 	h3 {
 		text-align: center;
