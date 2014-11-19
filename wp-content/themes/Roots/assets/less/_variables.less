@@ -39,7 +39,8 @@
   padding-right: 40px;
 
   @media all and (max-width: @mobile) {
-    .padding-side-sm();
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }
 .total-top-bottom-padding() {
@@ -52,6 +53,9 @@
 }
 .padding-all() {
   padding: 20px 40px;
+  @media all and (max-width: @mobile) {
+    padding: 10px;  
+  }
 }
 // LARGE
 .padding-all-lg() {

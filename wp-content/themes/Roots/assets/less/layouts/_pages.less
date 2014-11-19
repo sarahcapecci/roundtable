@@ -10,23 +10,43 @@
 	div:first-child {
 		background-image: url(../img/home_image.jpg);
 		width: 70%;
+		@media all and (max-width: @mobile) {
+			width: 100%;
+			margin-bottom: 10px;	
+		}
 	}
 	div:nth-child(2) {
 		width: 28.5%;
 		margin-left: 1%;
 		color: @white;
 		.padding-all-sm();
+		@media all and (max-width: @mobile) {
+			width: 100%;
+			margin-left: 0;	
+			height: 150px;
+		}
 
 		h2 {
 			color: @white;
 			font-size: 36px;
 			line-height: 42px;
+			@media all and (max-width: @mobile) {
+				font-size: 30px;
+				line-height: 36px;	
+				font-weight: 300;
+			}
 		}
-
 		p {
 			margin-top: 40px;
 			font-size: 24px;
 			line-height: 28px;
+			@media all and (max-width: @mobile) {
+				font-weight: 300;
+				margin-top: 10px;
+				font-size: 22px;
+				line-height: 26px;
+			}
+			
 		}
 	}
 }
@@ -34,6 +54,12 @@
 .entry-summary, .preview {
 	width: 49%;
 	vertical-align: top;
+
+	@media all and (max-width: @mobile) {
+		width: 100%;
+		margin-bottom: 10px;
+	}
+
 }
 
 .preview {
@@ -52,6 +78,11 @@
 .entry-summary {
 	.total-lateral-padding();
 	padding-top: 40px;
+
+	@media all and (max-width: @mobile) {
+		padding-top: 0;
+	}
+
 	p {
 		margin-bottom: 14px;
 	}
@@ -88,6 +119,9 @@ div.featured {
 	time, p {
 		width: 25%;
 		color: @white;
+		@media all and (max-width: @mobile) {
+			width: 48%;	
+		}
 	}
 	span {
 		top: 5px;
@@ -111,7 +145,23 @@ div.featured {
 			.hover-gray-txt();
 		}
 	}
+}
 
+.mobile-pagination {
+	bottom: -40px;
+	right: 20px;
+	width: 90px;
+	
+	ul li {
+		display: inline-block;
+		width: 40px;
+		text-align: right;
+		a {
+			color: @white;
+			padding: 5px;
+			.hover-gray-txt();
+		}
+	}
 }
 // ABOUT
 //* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *//

@@ -18,16 +18,24 @@
 			<?php get_template_part('templates/entry-meta'); ?>
 			<h2 class="entry-title margin-bottom-20 font-light white-txt"><?php the_title(); ?></h2>
 			<a class="white-link" href=""><i class="fa fa-share-square-o font-md margin-right-5"></i>Share</a>
+			<?php if ($wp_query->max_num_pages > 1) : ?>
+			  <nav class="mobile-pagination absolute">
+			    <ul>
+			      <li class="previous"><?php next_posts_link(__('&larr;', 'roots')); ?></li>
+			      <li class="next"><?php previous_posts_link(__('&rarr;', 'roots')); ?></li>
+			    </ul>
+			  </nav>
+			<?php endif; ?>	
 		</header>
-		<div class="relative bg-set featured" style="background-image: url(<?php echo $page_bg_image_url ?>)">
+		<div class="relative bg-set featured mobile-hide" style="background-image: url(<?php echo $page_bg_image_url ?>)">
 			<a class="black-link absolute blue-btn" href="<?php echo esc_url(home_url('/')); ?>archive">View All</a>
 		</div>
 		
 	</div>
 	<div class="entry-summary inline-block relative">
 		<?php if ($wp_query->max_num_pages > 1) : ?>
-		<span class="divider"></span>
-		  <nav class="post-pagination">
+		<span class="divider mobile-hide"></span>
+		  <nav class="post-pagination mobile-hide">
 		    <ul>
 		      <li class="previous"><?php next_posts_link(__('&larr;', 'roots')); ?></li>
 		      <li class="next"><?php previous_posts_link(__('&rarr;', 'roots')); ?></li>
