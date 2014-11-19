@@ -20,7 +20,7 @@
 			<a class="white-link" href=""><i class="fa fa-share-square-o font-md margin-right-5"></i>Share</a>
 		</header>
 		<div class="relative bg-set featured" style="background-image: url(<?php echo $page_bg_image_url ?>)">
-			<a href="<?php echo esc_url(home_url('/')); ?>archive">View All</a>
+			<a class="black-link absolute blue-btn" href="<?php echo esc_url(home_url('/')); ?>archive">View All</a>
 		</div>
 		
 	</div>
