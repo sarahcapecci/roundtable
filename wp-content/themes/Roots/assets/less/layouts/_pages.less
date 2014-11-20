@@ -267,6 +267,10 @@ p.about-text {
 	p, h3 {
 		color: @member-dark-gray;
 	}
+	@media all and (max-width: @mobile) {
+		min-width: 200px;
+		width: 100%;
+	}
 }
 
 .committees {
@@ -305,6 +309,10 @@ p.about-text {
 		color: @member-dark-gray;
 		padding: 0 10px;
 	}
+	@media all and (max-width: @mobile) {
+		min-width: 200px;
+		width: 100%;
+	}
 }
 
 .left-side {
@@ -334,7 +342,7 @@ p.about-text {
 	@media all and (max-width: @tablet) {
 		width: 40%;
 	}
-	@media all and (max-width: @mobile) {
+	@media all and (max-width: 720px) {
 		display: none;
 	}
 
