@@ -55,6 +55,12 @@ var UTIL = {
     $.each(document.body.className.replace(/-/g, '_').split(/\s+/),function(i,classnm) {
       UTIL.fire(classnm);
     });
+
+    $('#dropdown').on('click', function(e) {
+      e.preventDefault();
+      console.log('fucl');
+      $('.mobile-dropdown').toggle();
+    });
   }
 };
 

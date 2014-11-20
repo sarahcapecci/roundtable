@@ -31,7 +31,7 @@ function roots_scripts() {
     // $assets     = json_decode($get_assets, true);
     $assets     = array(
       'css'       => '/assets/css/main.css',
-      'js'        => '/assets/js/scripts.js',
+      'js'        => '/assets/js/main.js',
       'modernizr' => '/assets/vendor/modernizr/modernizr.js',
       'jquery'    => '//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.js'
     );
