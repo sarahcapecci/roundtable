@@ -310,6 +310,9 @@ p.about-text {
 .left-side {
 	width: 65%;
 	margin-right: 2%;
+	@media all and (max-width: @tablet) {
+		width: 55%;
+	}
 	@media all and (max-width: @mobile) {
 		width: 100%;
 		margin-right: 0;
@@ -328,8 +331,15 @@ p.about-text {
 
 .right-side {
 	width: 30%;
+	@media all and (max-width: @tablet) {
+		width: 40%;
+	}
 	@media all and (max-width: @mobile) {
 		display: none;
+	}
+
+	iframe {
+		width: 100%!important;
 	}
 }
 
