@@ -13,11 +13,11 @@
 	    }
 
 	 ?>
-	<div class="preview inline-block">
+	<div class="preview relative inline-block">
 		<header class="orange-bg">
 			<?php get_template_part('templates/entry-meta'); ?>
 			<h2 class="entry-title margin-bottom-20 font-light white-txt"><?php the_title(); ?></h2>
-			<a class="white-link" href=""><i class="fa fa-share-square-o font-md margin-right-5"></i>Share</a>
+			<!-- <a class="white-link" href=""><i class="fa fa-share-square-o font-md margin-right-5"></i>Share</a> -->
 			<?php if ($wp_query->max_num_pages > 1) : ?>
 			<a class="mobile-pagination white-link absolute mobile-show" href="<?php echo esc_url(home_url('/')); ?>archive">More Updates</a>
 			<nav class="mobile-pagination absolute">
@@ -28,15 +28,15 @@
 			</nav>
 			<?php endif; ?>	
 		</header>
-		<div class="relative bg-set featured mobile-hide" style="background-image: url(<?php echo $page_bg_image_url ?>)">
+		<div class="relative bg-set featured tablet-hide" style="background-image: url(<?php echo $page_bg_image_url ?>)">
 			<a class="black-link absolute" href="<?php echo esc_url(home_url('/')); ?>archive">View All</a>
 		</div>
 		
 	</div>
 	<div class="entry-summary inline-block relative">
 		<?php if ($wp_query->max_num_pages > 1) : ?>
-		<span class="divider mobile-hide"></span>
-		  <nav class="post-pagination mobile-hide">
+		<span class="divider tablet-hide"></span>
+		  <nav class="post-pagination tablet-hide">
 		    <ul>
 		      <li class="previous"><?php next_posts_link(__('&larr;', 'roots')); ?></li>
 		      <li class="next"><?php previous_posts_link(__('&rarr;', 'roots')); ?></li>

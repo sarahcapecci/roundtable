@@ -8,8 +8,8 @@ This is the page where the information about members is going to be displayed
 
 <div class="content-wrapper">
 	<div class="left-side inline-block vertical-al-top relative">
-		<a class="absolute mobile-show black-link" href="https://twitter.com/YouthRoundtable/lists/ryr-members" target="_blank">Open list <img src="<?php echo get_template_directory_uri(); ?>/assets/img/social_twitter.png" alt=""></a>
-		<h3 class="orange-txt margin-bottom-20">Member Organizations</h3>
+		<a class="absolute tablet-show black-link" href="https://twitter.com/YouthRoundtable/lists/ryr-members" target="_blank">Open list <img src="<?php echo get_template_directory_uri(); ?>/assets/img/social_twitter.png" alt=""></a>
+		<h3 class="orange-txt margin-bottom-20 title">Member Organizations</h3>
 		<?php while( has_sub_field('organization') ): ?>
 		<div class="member-card card-look min-height inline-block vertical-al-top margin-bottom-20">
 			<?php $member_img = get_sub_field('image'); ?>
@@ -27,7 +27,7 @@ This is the page where the information about members is going to be displayed
 		</div>
 		<?php endwhile; ?>
 	</div>
-	<div class="right-side inline-block vertical-al-top">
+	<div class="right-side inline-block vertical-al-top tablet-hide">
 		<h3 class="orange-txt margin-bottom-20">Live Updates</h3>
 		<?php if (roots_display_sidebar()) : ?>
 		  <aside role="complementary">

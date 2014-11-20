@@ -10,9 +10,9 @@
 	div:first-child {
 		background-image: url(../img/home_image.jpg);
 		width: 70%;
-		@media all and (max-width: @mobile) {
+		@media all and (max-width: @tablet) {
 			width: 100%;
-			margin-bottom: 10px;	
+			margin-bottom: 10px;
 		}
 	}
 	div:nth-child(2) {
@@ -20,17 +20,18 @@
 		margin-left: 1%;
 		color: @white;
 		.padding-all-sm();
-		@media all and (max-width: @mobile) {
+		@media all and (max-width: @tablet) {
 			width: 100%;
 			margin-left: 0;	
-			height: 150px;
+			max-height: 200px;
+			height: auto;
 		}
 
 		h2 {
 			color: @white;
 			font-size: 36px;
 			line-height: 42px;
-			@media all and (max-width: @mobile) {
+			@media all and (max-width: @tablet) {
 				font-size: 30px;
 				line-height: 36px;	
 				font-weight: 300;
@@ -40,7 +41,7 @@
 			margin-top: 40px;
 			font-size: 24px;
 			line-height: 28px;
-			@media all and (max-width: @mobile) {
+			@media all and (max-width: @tablet) {
 				font-weight: 300;
 				margin-top: 10px;
 				font-size: 22px;
@@ -55,7 +56,7 @@
 	width: 49%;
 	vertical-align: top;
 
-	@media all and (max-width: @mobile) {
+	@media all and (max-width: @tablet) {
 		width: 100%;
 		margin-bottom: 10px;
 	}
@@ -79,7 +80,7 @@
 	.total-lateral-padding();
 	padding-top: 40px;
 
-	@media all and (max-width: @mobile) {
+	@media all and (max-width: @tablet) {
 		padding-top: 0;
 	}
 
@@ -119,7 +120,7 @@ div.featured {
 	time, p {
 		width: 25%;
 		color: @white;
-		@media all and (max-width: @mobile) {
+		@media all and (max-width: @tablet) {
 			width: 48%;	
 		}
 	}
@@ -148,8 +149,8 @@ div.featured {
 }
 
 nav.mobile-pagination {
-	bottom: -40px;
-	right: 20px;
+	bottom: 0px;
+	right: 10px;
 	width: 90px;
 	
 	ul li {
@@ -165,9 +166,9 @@ nav.mobile-pagination {
 }
 
 a.mobile-pagination {
-	right: 110px;
+	right: 85px;
 	padding: 5px;
-	bottom: -35px;
+	bottom: 5px;
 }
 // ABOUT
 //* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *//
@@ -175,14 +176,14 @@ a.mobile-pagination {
 	width: 100%;
 	min-height: 300px;
 	margin-bottom: 40px;
-	@media all and (max-width: @mobile) {
+	@media all and (max-width: @tablet) {
 		margin-bottom: 10px;
 	}
 }
 .about-text {
 	width: 50%;
 	padding: 20px;
-	@media all and (max-width: @mobile) {
+	@media all and (max-width: @tablet) {
 		width: 100%;
 	}
 	p {
@@ -194,13 +195,13 @@ p.about-text, .values p {
 	font-size: 24px;
 	line-height: 30px;
 	color: @about-gray;
-	@media all and (max-width: @mobile) {
+	@media all and (max-width: @tablet) {
 		width: 100%;
 	}
 }
 p.about-text {
 	margin: 10px auto 40px auto;
-	@media all and (max-width: @mobile) {
+	@media all and (max-width: @tablet) {
 		margin-bottom: 10px;
 	}
 }
@@ -209,7 +210,7 @@ p.about-text {
 	margin: 2%;
 	padding: 2%;
 	height: 165px;
-	@media all and (max-width: @mobile) {
+	@media all and (max-width: @tablet) {
 		width: 100%;
 	}
 }
@@ -220,6 +221,27 @@ p.about-text {
 		margin: 0 auto;
 	}
 }
+
+.program-card {
+	width: 31%;	
+	margin: 1%;
+	max-height: 300px;
+	h3 {
+		margin-bottom: 0;
+	}
+	h4 {
+		margin-top: 0px;
+		margin-bottom: 15px;
+	}
+	p, h3 {
+		color: @member-dark-gray;
+	}
+	@media all and (max-width: @tablet) {
+		min-width: 200px;
+		width: 100%;
+	}
+
+}
 .sponsors {
 	margin: 40px auto 0px auto;
 	width: 48%;
@@ -227,7 +249,7 @@ p.about-text {
 	vertical-align: top;
 	text-align: center;
 	padding: 15px 30px;
-	@media all and (max-width: @mobile) {
+	@media all and (max-width: @tablet) {
 		width: 100%;
 	}
 
@@ -267,7 +289,7 @@ p.about-text {
 	p, h3 {
 		color: @member-dark-gray;
 	}
-	@media all and (max-width: @mobile) {
+	@media all and (max-width: @tablet) {
 		min-width: 200px;
 		width: 100%;
 	}
@@ -296,6 +318,7 @@ p.about-text {
 	min-width: 370px;
 	margin-right: 1.5%;
 	position: relative;
+
 	
 	h3 {
 		margin-bottom: 0;
@@ -309,6 +332,9 @@ p.about-text {
 		color: @member-dark-gray;
 		padding: 0 10px;
 	}
+	@media all and (max-width: @tablet) {
+		min-width: 250px;
+	}
 	@media all and (max-width: @mobile) {
 		min-width: 200px;
 		width: 100%;
@@ -318,14 +344,16 @@ p.about-text {
 .left-side {
 	width: 65%;
 	margin-right: 2%;
+
 	@media all and (max-width: @tablet) {
-		width: 55%;
-	}
-	@media all and (max-width: @mobile) {
 		width: 100%;
 		margin-right: 0;
 	}
-
+	h3.title {
+		@media all and (max-width: @mobile) {
+			width: 50%;
+		}
+	}
 	a.absolute {
 		right: 0;
 		top: 15px;
@@ -339,12 +367,6 @@ p.about-text {
 
 .right-side {
 	width: 30%;
-	@media all and (max-width: @tablet) {
-		width: 40%;
-	}
-	@media all and (max-width: 720px) {
-		display: none;
-	}
 
 	iframe {
 		width: 100%!important;
@@ -355,6 +377,9 @@ div.social {
 	position: absolute;
 	bottom: 30px;
 	left: 35%;
+	@media all and (max-width: @tablet) {
+		left: 30%;
+	}
 }
 
 .social img {

@@ -1,5 +1,5 @@
 footer {
-	height: 100px;
+	height: 105px;
 	position: relative;
 	margin-top: 40px;
 	ul, p {
@@ -34,6 +34,11 @@ footer {
 			left: 40px;
 			width: 50px;
 			top: 5px;
+			@media all and (max-width: @mobile) {
+				left: 20px;
+				width: 40px;
+				top: 10px;
+			}
 		}
 		p {
 			top: 10px;
