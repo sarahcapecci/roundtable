@@ -56,6 +56,10 @@
 		span {
 			display: inline-block;
 			max-width: 80%;
+
+			@media all and (max-width: @mobile) {
+				display: block;
+			}
 		}
 
 		input {
@@ -63,6 +67,9 @@
 			color: @black;
 			font-weight: normal;
 			padding: 4px 8px;
+			@media all and (max-width: @mobile) {
+				margin-left: 0;
+			}
 		}
 	}
 
@@ -81,6 +88,10 @@
 	textarea {
 		margin-left: 52px;
 		padding: 4px 6px;
+
+		@media all and (max-width: @mobile) {
+			margin-left: 0px;
+		}
 	}
 
 	input[type=submit] {
@@ -92,6 +103,9 @@
 
 		@media all and (max-width: @mobile) {
 			right: 5px;
+			margin-top: 5px;
+			margin-left: 5px;
+			position: relative;
 		}
 	}
 
