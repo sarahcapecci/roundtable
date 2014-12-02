@@ -64,10 +64,13 @@ function login_header( $title = 'Log In', $message = '', $wp_error = '' ) {
 	<!--<![endif]-->
 	<head>
 	<meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
-	<title><?php bloginfo('name'); ?> &rsaquo; <?php echo $title; ?></title>
+	<title>Torch &rsaquo; <?php echo $title; ?></title>
+	<link rel="stylesheet" href="wp-content/themes/Roots/assets/css/main.css">
 	<?php
 
-	wp_admin_css( 'login', true );
+	// does not link the original css file for this page:
+	// wp_admin_css( 'login', true );
+
 
 	/*
 	 * Remove all stored post data on logging out.
@@ -146,9 +149,10 @@ function login_header( $title = 'Log In', $message = '', $wp_error = '' ) {
 
 	?>
 	</head>
-	<body class="login <?php echo esc_attr( implode( ' ', $classes ) ); ?>">
+	<body class="login <?php echo esc_attr( implode( ' ', $classes ) ); ?>" style="background-image: url(<?php echo content_url(); ?>/themes/Roots/assets/img/home_image.jpg)">
 	<div id="login">
-		<h1><a href="<?php echo esc_url( $login_header_url ); ?>" title="<?php echo esc_attr( $login_header_title ); ?>" tabindex="-1"><?php bloginfo( 'name' ); ?></a></h1>
+		<h1><img src="<?php echo get_template_directory_uri(); ?>/assets/img/torch_logo.png" alt="Torch Logo"></h1>
+		<p>RYR Member Login</p>
 	<?php
 
 	unset( $login_header_url, $login_header_title );
@@ -215,7 +219,7 @@ function login_footer($input_id = '') {
 
 	// Don't allow interim logins to navigate away from the page.
 	if ( ! $interim_login ): ?>
-	<p id="backtoblog"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php esc_attr_e( 'Are you lost?' ); ?>"><?php printf( __( '&larr; Back to %s' ), get_bloginfo( 'title', 'display' ) ); ?></a></p>
+	
 	<?php endif; ?>
 
 	</div>
@@ -708,7 +712,7 @@ case 'register' :
 
 <form name="registerform" id="registerform" action="<?php echo esc_url( site_url('wp-login.php?action=register', 'login_post') ); ?>" method="post" novalidate="novalidate">
 	<p>
-		<label for="user_login"><?php _e('Username') ?><br />
+		<label for="user_login"><?php _e('organization name') ?><br />
 		<input type="text" name="user_login" id="user_login" class="input" value="<?php echo esc_attr(wp_unslash($user_login)); ?>" size="20" /></label>
 	</p>
 	<p>
@@ -868,12 +872,12 @@ default:
 
 <form name="loginform" id="loginform" action="<?php echo esc_url( site_url( 'wp-login.php', 'login_post' ) ); ?>" method="post">
 	<p>
-		<label for="user_login"><?php _e('Username') ?><br />
-		<input type="text" name="log" id="user_login" class="input" value="<?php echo esc_attr($user_login); ?>" size="20" /></label>
+		<label class="relative" for="user_login"><?php _e('organization name') ?><br />
+		<input type="text" name="log" id="user_login" class="input" value="<?php echo esc_attr($user_login); ?>" size="20" /><i class="fa fa-user absolute"></i></label>
 	</p>
 	<p>
-		<label for="user_pass"><?php _e('Password') ?><br />
-		<input type="password" name="pwd" id="user_pass" class="input" value="" size="20" /></label>
+		<label class="relative" for="user_pass"><?php _e('password') ?><br />
+		<input type="password" name="pwd" id="user_pass" class="input" value="" size="20" /><i class="fa fa-lock absolute"></i></label>
 	</p>
 	<?php
 	/**
@@ -885,7 +889,7 @@ default:
 	?>
 	<p class="forgetmenot"><label for="rememberme"><input name="rememberme" type="checkbox" id="rememberme" value="forever" <?php checked( $rememberme ); ?> /> <?php esc_attr_e('Remember Me'); ?></label></p>
 	<p class="submit">
-		<input type="submit" name="wp-submit" id="wp-submit" class="button button-primary button-large" value="<?php esc_attr_e('Log In'); ?>" />
+		<input type="submit" name="wp-submit" id="wp-submit" class="button button-primary button-large" value="<?php esc_attr_e('Login'); ?>" />
 <?php	if ( $interim_login ) { ?>
 		<input type="hidden" name="interim-login" value="1" />
 <?php	} else { ?>
