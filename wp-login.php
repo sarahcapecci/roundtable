@@ -150,9 +150,11 @@ function login_header( $title = 'Log In', $message = '', $wp_error = '' ) {
 	?>
 	</head>
 	<body class="login <?php echo esc_attr( implode( ' ', $classes ) ); ?>" style="background-image: url(<?php echo content_url(); ?>/themes/Roots/assets/img/home_image.jpg)">
-	<div id="login">
-		<h1><img src="<?php echo get_template_directory_uri(); ?>/assets/img/torch_logo.png" alt="Torch Logo"></h1>
-		<p>RYR Member Login</p>
+	<div class="login" id="login">
+		<div class="left">
+			<h1><img src="<?php echo get_template_directory_uri(); ?>/assets/img/torch_logo.png" alt="Torch Logo"></h1>
+			<p class="font-sm font-light">RYR Member Login</p>
+		</div>
 	<?php
 
 	unset( $login_header_url, $login_header_title );
@@ -239,6 +241,7 @@ function login_footer($input_id = '') {
 	 */
 	do_action( 'login_footer' ); ?>
 	<div class="clear"></div>
+	<p class="white-txt text-al-center font-thin">&copy;  Regional Youth Roundtable</p>
 	</body>
 	</html>
 	<?php
@@ -542,7 +545,7 @@ case 'retrievepassword' :
 	 */
 	do_action( 'lostpassword_form' ); ?>
 	<input type="hidden" name="redirect_to" value="<?php echo esc_attr( $redirect_to ); ?>" />
-	<p class="submit"><input type="submit" name="wp-submit" id="wp-submit" class="button button-primary button-large" value="<?php esc_attr_e('Get New Password'); ?>" /></p>
+	<p class="submit"><input type="submit" name="wp-submit" id="wp-submit" class="font-light button button-primary button-large" value="<?php esc_attr_e('Get New Password'); ?>" /></p>
 </form>
 
 <p id="nav">
@@ -648,7 +651,7 @@ case 'rp' :
 	do_action( 'resetpass_form', $user );
 	?>
 	<input type="hidden" name="rp_key" value="<?php echo esc_attr( $rp_key ); ?>" />
-	<p class="submit"><input type="submit" name="wp-submit" id="wp-submit" class="button button-primary button-large" value="<?php esc_attr_e('Reset Password'); ?>" /></p>
+	<p class="submit"><input type="submit" name="wp-submit" id="wp-submit" class="button button-primary button-large font-light" value="<?php esc_attr_e('Reset Password'); ?>" /></p>
 </form>
 
 <p id="nav">
@@ -871,13 +874,11 @@ default:
 ?>
 
 <form name="loginform" id="loginform" action="<?php echo esc_url( site_url( 'wp-login.php', 'login_post' ) ); ?>" method="post">
-	<p>
-		<label class="relative" for="user_login"><?php _e('organization name') ?><br />
-		<input type="text" name="log" id="user_login" class="input" value="<?php echo esc_attr($user_login); ?>" size="20" /><i class="fa fa-user absolute"></i></label>
+	<p class="relative">
+		<input placeholder="organization name" type="text" name="log" id="user_login" class="input" value="<?php echo esc_attr($user_login); ?>" size="20" /><i class="fa fa-user absolute"></i>
 	</p>
-	<p>
-		<label class="relative" for="user_pass"><?php _e('password') ?><br />
-		<input type="password" name="pwd" id="user_pass" class="input" value="" size="20" /><i class="fa fa-lock absolute"></i></label>
+	<p class="relative">
+		<input placeholder="password" type="password" name="pwd" id="user_pass" class="input" value="" size="20" /><i class="fa fa-lock absolute"></i>
 	</p>
 	<?php
 	/**
@@ -887,9 +888,9 @@ default:
 	 */
 	do_action( 'login_form' );
 	?>
-	<p class="forgetmenot"><label for="rememberme"><input name="rememberme" type="checkbox" id="rememberme" value="forever" <?php checked( $rememberme ); ?> /> <?php esc_attr_e('Remember Me'); ?></label></p>
+	
 	<p class="submit">
-		<input type="submit" name="wp-submit" id="wp-submit" class="button button-primary button-large" value="<?php esc_attr_e('Login'); ?>" />
+		<input type="submit" name="wp-submit" id="wp-submit" class="font-light button button-primary button-large" value="<?php esc_attr_e('Login'); ?>" />
 <?php	if ( $interim_login ) { ?>
 		<input type="hidden" name="interim-login" value="1" />
 <?php	} else { ?>

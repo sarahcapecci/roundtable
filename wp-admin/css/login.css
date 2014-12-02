@@ -148,7 +148,7 @@ p {
 }
 
 #login {
-	width: 320px;
+	width: 400px;
 	padding: 8% 0 0;
 	margin: auto;
 }
@@ -159,31 +159,6 @@ p {
 	padding: 12px;
 }
 
-.login #nav,
-.login #backtoblog {
-	font-size: 13px;
-	padding: 0 24px 0;
-}
-
-.login #nav {
-	margin: 24px 0 0 0;
-}
-
-#backtoblog {
-	margin: 16px 0 0 0;
-}
-
-.login #nav a,
-.login #backtoblog a {
-	text-decoration: none;
-	color: #999;
-}
-
-.login #nav a:hover,
-.login #backtoblog a:hover,
-.login h1 a:hover {
-	color: #2ea2cc;
-}
 
 .login form .input,
 .login input[type="text"] {
