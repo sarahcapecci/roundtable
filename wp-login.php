@@ -240,8 +240,8 @@ function login_footer($input_id = '') {
 	 * @since 3.1.0
 	 */
 	do_action( 'login_footer' ); ?>
-	<div class="clear"></div>
-	<p class="white-txt text-al-center font-thin">&copy;  Regional Youth Roundtable</p>
+		<div class="clear"></div>
+		<p id="login-footer" class="absolute white-txt text-al-center font-thin">&copy;  Regional Youth Roundtable</p>
 	</body>
 	</html>
 	<?php
@@ -872,7 +872,7 @@ default:
 		$user_login = ( 'incorrect_password' == $errors->get_error_code() || 'empty_password' == $errors->get_error_code() ) ? esc_attr(wp_unslash($_POST['log'])) : '';
 	$rememberme = ! empty( $_POST['rememberme'] );
 ?>
-
+<span class="diamond"></span>
 <form name="loginform" id="loginform" action="<?php echo esc_url( site_url( 'wp-login.php', 'login_post' ) ); ?>" method="post">
 	<p class="relative">
 		<input placeholder="organization name" type="text" name="log" id="user_login" class="input" value="<?php echo esc_attr($user_login); ?>" size="20" /><i class="fa fa-user absolute"></i>
@@ -890,7 +890,7 @@ default:
 	?>
 	
 	<p class="submit">
-		<input type="submit" name="wp-submit" id="wp-submit" class="font-light button button-primary button-large" value="<?php esc_attr_e('Login'); ?>" />
+		<input type="submit" name="wp-submit" id="wp-submit" class="font-light font-sm button button-primary button-large" value="<?php esc_attr_e('Login'); ?>" />
 <?php	if ( $interim_login ) { ?>
 		<input type="hidden" name="interim-login" value="1" />
 <?php	} else { ?>
