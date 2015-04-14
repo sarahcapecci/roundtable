@@ -7,9 +7,27 @@
     </div>
   <![endif]-->
 
-  <?php
-    do_action('get_header');
-    get_template_part('templates/header');
+ 
+  <?php 
+  $domain = $_SERVER['HTTP_HOST'];
+  $url = $_SERVER['REQUEST_URI'];
+  // echo "domain:" .$domain;
+  // echo "    URL:" .$url;
+
+    if ($url == '/torch-about/') {
+      // TORCH Header
+      do_action('get_header');
+      get_template_part('templates/header-torch');
+
+    } elseif($url == '/torch-members/') {
+      // TORCH Header
+      do_action('get_header');
+      get_template_part('templates/header-torch');
+    } else {
+      // YRT Header
+      do_action('get_header');
+      get_template_part('templates/header');
+    }
   ?>
 
   <div role="document">

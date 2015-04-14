@@ -16,6 +16,7 @@
             <li class="menu-about"><a href="<?php echo esc_url(home_url('/')); ?>">updates</a></li>
             <li class="menu-about"><a href="<?php echo esc_url(home_url('/')); ?>about/">about</a></li>
             <li class="menu-team"><a href="<?php echo esc_url(home_url('/')); ?>team/">team</a></li>
+            <li class="menu-team"><a href="<?php echo esc_url(home_url('/')); ?>events/">events</a></li>
             <li class="menu-members"><a href="<?php echo esc_url(home_url('/')); ?>members/">members</a></li>
             <li><button class="transparent-bg" data-toggle="modal" data-target="#myModal">connect</button></li>
           </ul>

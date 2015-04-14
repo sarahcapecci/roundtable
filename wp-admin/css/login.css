@@ -13,9 +13,7 @@ html {
 }
 
 body {
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
+	background: #f1f1f1;
 	min-width: 0;
 	color: #444;
 	font-family: "Open Sans", sans-serif;
@@ -56,7 +54,7 @@ p {
 }
 
 .login .message {
-	border-left: 4px solid #7ad03a;
+	border-left: 4px solid #2ea2cc;
 	padding: 1px 12px;
 	background-color: #fff;
 	-webkit-box-shadow: 0 1px 1px 0 rgba(0,0,0,0.1);
@@ -148,7 +146,7 @@ p {
 }
 
 #login {
-	width: 400px;
+	width: 320px;
 	padding: 8% 0 0;
 	margin: auto;
 }
@@ -159,6 +157,31 @@ p {
 	padding: 12px;
 }
 
+.login #nav,
+.login #backtoblog {
+	font-size: 13px;
+	padding: 0 24px 0;
+}
+
+.login #nav {
+	margin: 24px 0 0 0;
+}
+
+#backtoblog {
+	margin: 16px 0 0 0;
+}
+
+.login #nav a,
+.login #backtoblog a {
+	text-decoration: none;
+	color: #999;
+}
+
+.login #nav a:hover,
+.login #backtoblog a:hover,
+.login h1 a:hover {
+	color: #2ea2cc;
+}
 
 .login form .input,
 .login input[type="text"] {

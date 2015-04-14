@@ -28,7 +28,7 @@
 	}
 	ul li {
 		display: inline-block;
-		width: 18%;
+		width: 15%;
 		text-align: right;
 		margin-left: 1%;
 		@media all and (max-width: @tablet) {
@@ -77,3 +77,113 @@
 	}
 }
 
+.header.torch {
+	background-color: @white;
+	position: relative;
+	width: 100%;
+	height: 80px;
+	margin-bottom: 40px;
+	
+	nav {
+		width: 80%;
+		position: absolute;
+		right: 40px;
+		bottom: 0px;
+		border-radius: 3px;
+		background-color: @orange;
+	}
+
+	.tablet-show {
+		@media all and (max-width: @tablet) {
+			right: -42px;
+			background-color: transparent;
+			position: absolute;
+			top: 30px;
+		}
+	}
+
+	li.dropdown {
+		width: 30%;
+		right: -35%;
+		@media all and (max-width: @mobile) {
+			right: -15%;
+		}
+	}
+
+	nav a, nav button {
+		text-decoration: none;
+		color: @white;
+		font-size: 16px;
+		line-height: 22px;
+	}
+
+	ul {
+		width: 65%;
+		left: 39%;
+		top: 4px;
+		position: relative;
+		@media all and (max-width: @tablet) {
+			width: 100%;
+			left: 0;
+			position: absolute;
+			z-index: 100;
+		}
+		@media all and (max-width: @mobile) {
+			width: 125%;
+			left: -5%;
+		}
+
+		&.mobile-dropdown {
+			margin-top: 40px;
+		}
+
+		i {
+			font-size: 30px;
+			color: @orange;
+		}
+		li {
+			display: inline-block;
+			width: 15%;
+			text-align: center;
+			margin-left: .5%;
+
+			@media all and (max-width: @tablet) {
+				a {
+					color: black;
+				}
+			}
+			&.active {
+				font-weight: bold;
+			}
+		}
+	}
+	#YRT_logo {
+		position: absolute;
+		right: 40px;
+		top: 2px;
+		@media all and (max-width: @tablet) {
+			display: none;
+		}
+	}
+	.navbar-brand {
+		position: absolute;
+		left: 40px;
+		bottom: 5px;
+		width: 15%;
+		@media all and (max-width: @tablet) {
+			left: 0px;
+			width: 40%;
+		}
+
+		img {
+			width: 140px;
+			position: absolute;
+			bottom: 0;
+			@media all and (max-width: @tablet) {
+				max-width: 100%;
+			}
+		}
+	}
+}
+
+	

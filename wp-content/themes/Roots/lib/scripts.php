@@ -32,7 +32,7 @@ function roots_scripts() {
     $assets     = array(
       'css'       => '/assets/css/main.css',
       'js'        => '/assets/js/scripts.js',
-      'modernizr' => '/assets/vendor/modernizr/modernizr.js',
+      'modernizr' => '/assets/js/script.js',
       'jquery'    => '//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.js'
     );
   }
